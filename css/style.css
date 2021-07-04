@@ -40,6 +40,8 @@ ul{
 
  .foto{
      width: 98%;
+     margin-bottom: 10%;
+     margin-top: 10%;
  }
 
  .gray_container{
@@ -47,6 +49,8 @@ ul{
      padding: 4em 0 2em;
      font-weight: bold;
      margin-bottom: 10%;
+     
+    
  }
 
  .gray_container ul li:first-child{
@@ -159,6 +163,16 @@ nav ul li a:hover{
         width: 50%;
     }
 
+    .gray_container ul li:first-child{
+        margin-bottom: 2em;
+        margin-top: -1%;
+   
+    }
+
+    .arthur{
+        width: 7%;
+    }
+
     h3{
         font-size: 3em;
         margin: 0;
@@ -171,6 +185,7 @@ nav ul li a:hover{
     nav ul{
         width: 40%;
     }
+
 }
 
 @media only screen and (min-width: 875px) {
@@ -179,7 +194,13 @@ nav ul li a:hover{
     }
 
     .cta{
-        width: 50%;
+       
+        width: calc(64% - 2em);
+        border-radius: 20px;
+        padding: .5em;
+        margin-left: 18%;
+        text-decoration: none;
+        
     }
 
     .container{
@@ -220,8 +241,9 @@ nav ul li a:hover{
     }
 
     .scroll{
-        width: 300px;
+        size: 10%;
         animation: move 1s infinite alternate;
+        margin-top: 10%;
     }
 
     @keyframes move {
