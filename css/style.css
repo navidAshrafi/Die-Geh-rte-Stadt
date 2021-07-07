@@ -49,8 +49,6 @@ ul{
      padding: 4em 0 2em;
      font-weight: bold;
      margin-bottom: 10%;
-     
-    
  }
 
  .gray_container ul li:first-child{
@@ -92,7 +90,7 @@ ul{
  }
 
  .footer_container{
-     margin-top: 20%;
+     margin-top: 10%;
      width: 100%;
      background-color: #d0d9e0;
      padding: 3em 0;
@@ -195,12 +193,12 @@ nav ul li a:hover{
 
     .cta{
        
-        width: calc(64% - 2em);
+        width: calc(20% - 2em);
         border-radius: 20px;
         padding: .5em;
-        margin-left: 18%;
+        margin-left: 0;
         text-decoration: none;
-        
+        display: inline-block;
     }
 
     .container{

@@ -9,12 +9,19 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="Fotos/logo.png" alt="Die Gehörte Stadt" class="logo"></a>
+        </header>
+        <Section class="mapTop">
+            <h3>Zoom in and lick on each location to hear the sound</h3>
+        </Section>
     <div id="map"></div>
     <script>
         function initMap() {
             var location = {lat:52.520008, lng:13.404954};
             var map = new google.maps.Map(document.getElementById('map'),{
-                zoom:15,
+                zoom:11,
                 Center: location
             });
             /*
@@ -24,19 +31,23 @@
                 icon: 'http://maps.google.com/mapfiles/kml/paddle/go.png'
             });
             var soundTrackPane = new google.maps.InfoWindow({
-                content:'<h>Play Sound</h3>'
+                content:'<h3>Play Sound</h3>'
             });
             marker.addListener('click', function(){
                 soundTrackPane.open(map, marker)
             }); */
             var markers= [
-                {coords:{lat:52.510250, lng:13.432590}},
-                {coords:{lat:52.522331, lng:13.412740}},
-                {coords:{lat:52.506790, lng:13.333220}},
-                {coords:{lat:52.478199, lng:13.386020}},
-                {coords:{lat:52.569592, lng:13.403230}},
-                {coords:{lat:52.509789, lng:13.314420}},
-                {coords:{lat:52.437620, lng:13.220680}}];
+                {coords:{lat:52.510250, lng:13.432590}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/Am_Ostbahnhof.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.513720, lng:13.437820}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/At_WindowSide.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.391479, lng:13.112170}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/At_Work.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.508500, lng:13.434650}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/Crowded_Street.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.513469, lng:13.439089}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Kitchen.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.498792, lng:13.426832}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Mosque.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.507122, lng:13.435261}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Park.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.509646, lng:13.435152}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Rewe.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.507383, lng:13.332500}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Sbahn_Station_Zoo.m4a" type="audio/mpeg"/></audio>'},
+                {coords:{lat:52.520187, lng:13.387697}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/In_Train.m4a" type="audio/mpeg"/></audio>'}
+            ];
             //Loop through markers
             for(var i = 0; i< markers.length; i++)  {
                 //Add marker
@@ -48,10 +59,44 @@
                 position:props.coords,
                 map:map,
                 icon: 'http://maps.google.com/mapfiles/kml/paddle/go.png'
+                
                 });
+                var soundTrackPane = new google.maps.InfoWindow({
+                content:props.soundTrack
+            });
+            marker.addListener('click', function(){
+                soundTrackPane.open(map, marker)
+            });
             }
         }
     </script>
-    <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSfDZJyeiKrrDUW0KlYH2Md9cpI7-Su_o&callback=initMap&libraries=&v=weekly" async></script>
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSfDZJyeiKrrDUW0KlYH2Md9cpI7-Su_o&callback=initMap&libraries=&v=weekly" async></script>
+    </Section>
+        <img src="Fotos/scroll.svg" alt="scroll" class="scroll hide_mobile show_desktop">
+    <Section>
+    <div class="gray_container">
+        <div class="container">  
+            <h3 class="cta0">You might also like to have a look at the following:</h3>
+            <a href="#" class="cta1">Noise Polution</a>
+            <a href="#" class="cta2">Wiki</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_container">
+            <div class="container">
+                <a href="#">
+                    <img src="Fotos/Logo.png" alt="logo" class="logo">
+                </a>
+                    <p class="address">Straße des 17. Juni 135, 10623 <br>Berlin</p>
+                    <ul class="footer_links">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 </html>
