@@ -14,7 +14,7 @@
             <a href="#"><img src="Fotos/logo.png" alt="Die Gehörte Stadt" class="logo"></a>
         </header>
         <Section class="mapTop">
-            <h3>Zoom in and lick on each location to hear the sound</h3>
+            <h3>Zoom in and click on each location to hear the sound</h3>
         </Section>
     <div id="map"></div>
     <script>
@@ -24,18 +24,6 @@
                 zoom:11,
                 Center: location
             });
-            /*
-            var marker = new google.maps.Marker({
-                position:{lat:52.510250, lng:13.432590},
-                map:map,
-                icon: 'http://maps.google.com/mapfiles/kml/paddle/go.png'
-            });
-            var soundTrackPane = new google.maps.InfoWindow({
-                content:'<h3>Play Sound</h3>'
-            });
-            marker.addListener('click', function(){
-                soundTrackPane.open(map, marker)
-            }); */
             var markers= [
                 {coords:{lat:52.510250, lng:13.432590}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/Am_Ostbahnhof.m4a" type="audio/mpeg"/></audio>'},
                 {coords:{lat:52.513720, lng:13.437820}, soundTrack:'<img src="Fotos/navid.jpg" class="navid"><h3>Navid</h3><audio controls><source src="audio/At_WindowSide.m4a" type="audio/mpeg"/></audio>'},
