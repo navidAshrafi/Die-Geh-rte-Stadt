@@ -29,7 +29,7 @@ ul{
      justify-content: space-between;
  }
 
- .hide_mobile{
+ .hide-mobile{
      display: none;
  }
 
@@ -190,6 +190,15 @@ nav ul li a:hover{
     .gray_container ul{
         margin: 4% 0 0;
     }
+
+    .gray_container ul li:first-child{
+       margin-left: -10%;
+    }
+
+    .michael{
+        width: 11%;
+    }
+    
 
     .cta{
        

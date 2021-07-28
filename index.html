@@ -13,27 +13,33 @@
         <a href="#"><img src="Fotos/logo.png" alt="Die Gehörte Stadt" class="logo"></a>
             <nav>
                 <a href="#" class="hide_desktop">
-                    <img src="Fotos/ham.svg" alt="menu" class="menu" id="menu">
+                    <img src="Fotos/ham.svg" alt="toggle menu" class="menu" id="menu">
 
                 </a>
-                <ul class="show_desktop hide_mobile" id="nav">
+                <ul class="show_desktop hide-mobile" id="nav">
                     <li id="exit" class="exit_btn hide_desktop"><img src="Fotos/exit.svg" alt="exit"></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Noise Polution</a></li>
-                    <li><a href="#">MAP</a></li>
-                    <li><a href="#">Wiki</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="map.html">MAP</a></li>
+                    <li><a href="https://www.labprepare.tu-berlin.de/wiki/doku.php">Wiki</a></li>
+                    <li><a href="About.html">About us</a></li>
 
                 </ul>
             </nav>
         </header>
         <Section class="picture_texts">
             <img src="Fotos/alexa.jpeg" alt="alexa" class="foto">
-            <h3>Listen to a student's life in Berlin...</h3>
+            <h1>Menschen auf der Straße am diskutieren. Hupende Autos an 
+                der großen Kreuzung. Das Bohren der neuen Baustelle von nebenan. 
+                All das sind Geräusche, die das urbane Leben stark prägen. Lärmbelästigung
+                entwickelt sich daher zur einer großen Herausforderung für das Leben in der Stadt.</h1>
             <img src="Fotos/berlin.jpeg" alt="berlin" class="foto">
-            <h3>Listen to a student's life in Berlin...</h3>
+            <h1>Das Projekt “Die gehörte Stadt” von Lab:Prepare ist dabei dieser
+                Problematik auf den Grund gegangen. Anhand einer interaktiven Soundkarte
+                hat die interdisziplinäre Gruppe aus sieben Studierenden, die Lärmbelästigung in Berlin veranschaulicht.</h1>
             <img src="Fotos/potsdamer.jpeg" alt="potsdamer" class="foto">
-            <h3>Listen to a student's life in Berlin...</h3>
+            <h1>Dabei haben sie Geräusche aus dem Alltag Berliner Studierender in kurze
+                 Snippets auf einer Website gebracht, um zu zeigen mit wie viel Lärm Studierende in der Stadt zu kämpfen haben.</h1>
         </Section>
             <img src="Fotos/scroll.svg" alt="scroll" class="scroll hide_mobile show_desktop">
         <Section>
@@ -88,6 +94,22 @@
         </div>
 
     </footer>
+
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e){
+            nav.classList.toggle('hide-mobile');  
+            e.preventDefault();  
+        });
+
+        exit.addEventListener('click', function(e){
+            nav.classList.add('hide-mobile');  
+            e.preventDefault();  
+        });
+    </script>
     
 </body>
 </html>
