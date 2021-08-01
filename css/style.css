@@ -89,6 +89,27 @@ ul{
      text-decoration: none;
  }
 
+ .ctaa{
+    background-color: lightseagreen;
+    width: calc(70% - 2em);
+    display: block;
+    color: #fff;
+    border-radius: 20px;
+    padding: .5em;
+    margin-left: 18%;
+    text-decoration: none;
+}
+
+ .cta:hover{
+    animation: move_map .5s infinite alternate;
+    background-color: rgb(240, 12, 164);
+ }
+
+ .ctaa:hover{
+    animation: move_map .5s infinite alternate;
+    background-color: rgb(240, 12, 164);
+ }
+
  .footer_container{
      margin-top: 10%;
      width: 100%;
@@ -217,6 +238,16 @@ nav ul li a:hover{
         display: inline-block;
     }
 
+    .ctaa{
+       
+        width: calc(30% - 2em);
+        border-radius: 20px;
+        padding: .5em;
+        margin-left: 0;
+        text-decoration: none;
+        display: inline-block;
+    }
+
     .container{
         width: 80%;
         margin: 0 auto;
@@ -257,7 +288,7 @@ nav ul li a:hover{
     nav ul li a:hover{
         background-color: inherit;
         font-weight: bold;
-        color: lightcyan;
+        color: rgb(7, 150, 150);
     }
 
     .scroll{
@@ -284,6 +315,16 @@ nav ul li a:hover{
         }
         to{
             transform: translateY(20px);
+        }
+        
+    }
+
+    @keyframes move_map {
+        from{
+            transform: translateY(0px);
+        }
+        to{
+            transform: translateY(10px);
         }
         
     }
