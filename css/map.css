@@ -87,12 +87,19 @@ ul.footer_links li a{
    
    
 }   
-ul.footer_links li:first-child{
+ul.footer_links li{
     margin: 1em 3em;
 }
 
-ul.footer_links li:nth-child(2){
-   margin: 1em 3em;
+ul.footer_links li:first-child:hover{
+   font-weight: bold;
+   background-color: lightgray;
+   
+}
+
+ul.footer_links li:nth-child(2):hover{
+   font-weight: bold;
+   background-color: lightgray;
 }
 
 .scroll{

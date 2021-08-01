@@ -109,12 +109,19 @@ ul{
     
     
  }   
- ul.footer_links li:first-child{
+ ul.footer_links li{
      margin: 1em 3em;
  }
 
- ul.footer_links li:nth-child(2){
-    margin: 1em 3em;
+ul.footer_links li:first-child:hover{
+    font-weight: bold;
+    background-color: lightgray;
+    
+}
+
+ul.footer_links li:nth-child(2):hover{
+    font-weight: bold;
+    background-color: lightgray;
 }
 
 nav ul{
@@ -235,22 +242,40 @@ nav ul li a:hover{
 
     nav ul li{
         float: left;
+        
     }
 
     nav ul li a{
         color: black;
         background-color: inherit;
-        text-align: right;
+        text-align: center;
+        padding: 0;
+        margin-right: 2em;
+        margin-left: 2em;
     }
 
     nav ul li a:hover{
         background-color: inherit;
+        font-weight: bold;
+        color: lightcyan;
     }
 
     .scroll{
         size: 10%;
         animation: move 1s infinite alternate;
         margin-top: 10%;
+    }
+
+    @media only screen and (min-width: 1990px) {
+
+        .gray_container ul{
+            margin: 4% 0 0 0;
+        }
+    
+        .gray_container ul li:first-child{
+           padding-right: 30%;
+        }
+
     }
 
     @keyframes move {
