@@ -58,9 +58,13 @@ ul.footer_links li:nth-child(2):hover{
    background-color: lightgray;
 }
 
-.press{
+.text{
     margin: 10%;
     margin-top: 0%;
+}
+
+.main{
+    text-align: left;
 }
 
 
